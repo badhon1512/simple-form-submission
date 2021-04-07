@@ -12,6 +12,107 @@
 
 <body>
 
+  <script>
+    const fromValidation = () => {
+
+      let valid = true;
+
+      if (document.forms['buyer_form']['amount'].value == "") {
+        document.getElementById('amounterror').textContent = "Amount must be filled up";
+
+        valid = false;
+
+      }
+      else{
+        document.getElementById('amounterror').textContent ="";
+      }
+
+      if (document.forms['buyer_form']['buyer'].value == "") {
+        document.getElementById('buyererror').textContent = "Buyer must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('buyererror').textContent = "";
+      }
+
+
+
+      if (document.forms['buyer_form']['receipt_id'].value == "") {
+        document.getElementById('receipterror').textContent = "Receipt Id must be filled up";
+        valid = false;
+      }
+
+      else{
+        document.getElementById('receipterror').textContent = "";
+
+      }
+
+      if (document.forms['buyer_form']['items'].value == "") {
+        document.getElementById('itemserror').textContent = "Items must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('itemserror').textContent = "";
+      }
+
+
+      if (document.forms['buyer_form']['buyer_email'].value == "") {
+        document.getElementById('emailerror').textContent = "Email must be filled up";
+        valid = false;
+      }
+
+      else{
+        document.getElementById('emailerror').textContent = "";
+      }
+
+      if (document.forms['buyer_form']['note'].value == "") {
+        document.getElementById('noteerror').textContent = "Note must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('noteerror').textContent = "";
+      }
+
+      if (document.forms['buyer_form']['city'].value == "") {
+        document.getElementById('cityerror').textContent = "City must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('cityerror').textContent = "";
+      }
+
+      if (document.forms['buyer_form']['phone'].value == "") {
+        document.getElementById('phoneerror').textContent = "Phone must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('phoneerror').textContent = "";
+      }
+      if (document.forms['buyer_form']['entry_by'].value == "") {
+        document.getElementById('entryerror').textContent = "Entry By must be filled up";
+        valid = false;
+      }
+      else{
+        document.getElementById('entryerror').textContent = "";
+      }
+
+
+
+
+
+
+
+
+      if (valid) {
+        return true;
+      } else {
+        return false;
+      }
+
+
+
+    }
+  </script>
   
   <form id="buyer_form"  action="<?php echo htmlspecialchars(
                                   $_SERVER['PHP_SELF']
@@ -21,7 +122,7 @@
 
 
     <label for="">Amount</label>
-    <input type="number" placeholder="Amount" name='amount' id='amount'> <span id='amounterror'></span><br><br>
+    <input type="number" placeholder="Amount" name='amount' id='amount'> <span id='amounterror'></span>  <br><br>
 
 
     <label for="">Buyer</label>
