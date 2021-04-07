@@ -113,7 +113,7 @@
 
     }
   </script>
-  
+  <?php require '../controllers/registration.php'; ?>
   <form id="buyer_form"  action="<?php echo htmlspecialchars(
                                   $_SERVER['PHP_SELF']
                                 ); ?>" method="POST">
@@ -122,50 +122,58 @@
 
 
     <label for="">Amount</label>
-    <input type="number" placeholder="Amount" name='amount' id='amount'> <span id='amounterror'></span>  <br><br>
+    <input type="number" placeholder="Amount" name='amount' id='amount' value="<?php echo $amount ?>"> <span id='amounterror'></span> <?php echo $amounterror; ?> <br><br>
 
 
     <label for="">Buyer</label>
-    <input type="text" placeholder="Buyer" name='buyer' id='buyer'>
+    <input type="text" placeholder="Buyer" name='buyer' id='buyer' value="<?php echo $buyer ?>">
     <span id='buyererror'> </span>
-    <br><br>
+    <?php echo $buyererror; ?><br><br>
 
 
 
     <label for="">Receipt Id</label>
-    <input type="text" placeholder="Receipt Id" name='receipt_id' id='receipt_id'>
+    <input type="text" placeholder="Receipt Id" name='receipt_id' id='receipt_id' value="<?php echo $receiptId ?>">
     <span id='receipterror'> </span>
+    <?php echo $receipterror; ?>
     <br><br>
 
 
 
     <label for="">Items</label>
-    <input type="text" placeholder="Items" name='items' id='items'><span id='itemserror'> </span><br><br>
+    <input type="text" placeholder="Items" name='items' id='items'value="<?php echo $items ?>"><span id='itemserror'> </span>
+    
+    <?php echo $itemserror; ?><br><br>
 
 
     <label for="">Buyer Email</label>
-    <input type="text" placeholder="Buyer Email" name='buyer_email' id='buyer_email'>
+    <input type="text" placeholder="Buyer Email" name='buyer_email' id='buyer_email' value="<?php echo $email ?>">
     <span id='emailerror'> </span>
+    <?php echo $emailerror; ?>
     <br><br>
 
 
 
 
     <label for="">Note</label>
-    <input type="text" placeholder="Note" name='note' id='note'><span id='noteerror'> </span><br><br>
+    <input type="text" placeholder="Note" name='note' id='note' value="<?php echo $note ?>"><span id='noteerror'> </span>
+    <?php echo $noteerror; ?><br><br>
 
     <label for="">City</label>
-    <input type="text" placeholder="City" name='city' id='city'><span id='cityerror'> </span><br><br>
+    <input type="text" placeholder="City" name='city' id='city' value="<?php echo $city ?>"><span id='cityerror' > </span>
+    <?php echo $cityerror; ?><br><br>
 
     <label for="">Phone</label>
-    <input type="text" placeholder="Phone" name='phone' id='phone'><span id='phoneerror'> </span><br><br>
+    <input type="text" placeholder="Phone" name='phone' id='phone' value="<?php echo $phone ?>"><span id='phoneerror'> </span>
+    <?php echo $phoneerror; ?><br><br>
 
 
 
 
 
     <label for="">Entry By</label>
-    <input type="number" placeholder="Entry By" name='entry_by' id='entry_by'><span id='entryerror'> </span><br><br>
+    <input type="number" value="<?php echo $entry ?>" placeholder="Entry By" name='entry_by' id='entry_by'><span id='entryerror'> </span>
+    <?php echo $entryerror; ?><br><br>
 
 
 
