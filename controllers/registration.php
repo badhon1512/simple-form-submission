@@ -25,7 +25,7 @@ session_start();
     $city=$_POST['city'];
     $entry=$_POST['entry_by'];
 
-    echo $amount;
+    
    
     
      
@@ -108,7 +108,11 @@ session_start();
      $connect=new db();
      $conobj=$connect->OpenCon();
      
-     $connect->InsertQuery($conobj,$sql);
+    if($connect->InsertQuery($conobj,$sql))
+    {
+        header('location:./report.php');
+    }
+    
      $connect->CloseCon($conobj);
      
    }

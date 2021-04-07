@@ -1,0 +1,45 @@
+
+*{
+  background-color: antiquewhite;
+}
+label{
+
+  margin-left: 100px;
+  width: 200px;
+ 
+}
+
+input{
+  margin-left: 40px;
+}
+
+#btn-submit{
+
+  margin-left: 100px;
+  background-color: green;
+  padding: 10px 100px;
+}
+
+ul{
+
+  background-color: rgb(51, 255, 0);
+  height: 50px;
+  width: 100%;
+}
+
+ul li{
+
+  list-style-type: none;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}
+
+ul li a{
+
+  background-color: rgb(0, 55, 100);
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
