@@ -12,6 +12,8 @@
 
    <div>
        <ul>
+
+       <li id="brand">Xpeed Studio</li>
        <li><a href="./RegistrationForm.php">Registration</a></li>
        <li><a href="./report.php">Reports</a></li>
        </ul>

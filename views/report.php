@@ -13,18 +13,18 @@
 <?php   include './navbar.php' ?>
 
 
-<div style="margin: 20px 70px;">
+<div style="margin: 20px 30px;">
 
       <h2>Report page</h2>
-
+      <button><a href="./report.php">Refresh</a></button><br><br>
       <form action="" method="POST">
         <input type="text" name='id' placeholder="Search by id">
 
         <button type="submit">Search</button>
       </form>
 
-<br><br>
-      <button><a href="./report.php">Refresh</a></button>
+
+      
 
       
 
