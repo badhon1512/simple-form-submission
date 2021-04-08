@@ -1,0 +1,22 @@
+
+
+* Download the project
+
+* open xampp and start apache and mysql
+
+* Go to MySQL admin and export the simple_form_submission.sql file which is the database for this task.
+
+* Open a browser and go to this url : http://localhost/Simple_Form_Submission/views/RegistrationForm.php
+
+* You will find a registration form
+
+* try to submit it with empty input field , it will not allow you to submit the form that is frontend validation using js
+
+* Now test the input fields according to your instruction.
+
+* All backend validation has been done using php in the registration.php file inside controllers folder.
+
+* You can also find the report.php file which is responsible for showing all the data and you can also search by id.
+
+
+****** Thank You ******

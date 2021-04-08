@@ -47,6 +47,11 @@ session_start();
       
      
     }
+    else if(strlen($buyer)>20)
+    {
+      $buyererror= "Buyer should be maximum 20 characters";
+      $valid=false;
+    }
 
 
     
@@ -68,6 +73,14 @@ session_start();
     if(!filter_var($email, FILTER_VALIDATE_EMAIL))
     {
       $emailerror= "Must be a email .";
+      $valid=false;
+
+      
+    }
+
+    if(strlen($note)>30)
+    {
+      $noteerror= "Note must be within 30 characters";
       $valid=false;
 
       
@@ -110,7 +123,7 @@ session_start();
      
     if($connect->InsertQuery($conobj,$sql))
     {
-        header('location:./report.php');
+        header('location:./reportui.php');
     }
     
      $connect->CloseCon($conobj);

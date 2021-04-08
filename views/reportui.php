@@ -13,10 +13,10 @@
 <?php   include './navbar.php' ?>
 
 
-<div style="margin: 20px 30px;">
+<div style="margin-left: 2rem;">
 
       <h2>Report page</h2>
-      <button><a href="./report.php">Refresh</a></button><br><br>
+      <button><a href="./reportui.php">Refresh</a></button><br><br>
       <form action="" method="POST">
         <input type="text" name='id' placeholder="Search by id">
 
@@ -30,24 +30,9 @@
 
 
       <?php
-include "../models/db.php";
+      include('../controllers/report.php');
 
-if($_SERVER["REQUEST_METHOD"]==="POST")
-{
-
-  $sql="SELECT * FROM buyers where id='$_POST[id]'";
-
-}
-else
-{
-  $sql="SELECT * FROM buyers";
-}
-  $connect=new db();
-  $conobj=$connect->OpenCon();
- 
-  $result=$connect->SelectQuery($conobj,$sql);
-
-  echo "<table border='1px'>";
+  echo "<table style='width:95%' border='1px'>";
 
   echo "<tr>";
 

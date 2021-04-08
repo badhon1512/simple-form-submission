@@ -15,7 +15,7 @@
 
        <li id="brand">Xpeed Studio</li>
        <li><a href="./RegistrationForm.php">Registration</a></li>
-       <li><a href="./report.php">Reports</a></li>
+       <li><a href="./reportui.php">Reports</a></li>
        </ul>
    </div>
   

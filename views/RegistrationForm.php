@@ -12,6 +12,123 @@
 
 <body>
 
+  
+  <?php
+  include('./navbar.php');
+  require '../controllers/registration.php'; ?>
+  <form id="buyer_form" onsubmit="return  formValidation()" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF']); ?>"method="POST">
+
+    <table>
+
+      <tr>
+
+        <td><label for="">Amount</label></td>
+
+        <td><input type="number" placeholder="Amount" name='amount' id='amount' value="<?php echo $amount ?>"> <span id='amounterror'></span> <?php echo $amounterror; ?> </td>
+      </tr>
+
+
+
+      <tr>
+
+        <td><label for="">Buyer</label></td>
+        <td> <input type="text" placeholder="Buyer" name='buyer' id='buyer' value="<?php echo $buyer ?>">
+          <span id='buyererror'> </span>
+          <?php echo $buyererror; ?>
+        </td>
+      </tr>
+
+
+
+      <tr>
+
+        <td><label for="">Receipt Id</label></td>
+
+        <td><input type="text" placeholder="Receipt Id" name='receipt_id' id='receipt_id' value="<?php echo $receiptId ?>">
+          <span id='receipterror'> </span>
+          <?php echo $receipterror; ?>
+          
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+
+
+        <td><label for="">Items</label></td>
+        <td><input type="text" placeholder="Items" name='items' id='items' value="<?php echo $items ?>"><span id='itemserror'> </span>
+
+          <?php echo $itemserror; ?></td>
+      </tr>
+
+
+
+      <tr>
+        <td><label for="">Buyer Email</label></td>
+        <td><input type="text" placeholder="Buyer Email" name='buyer_email' id='buyer_email' value="<?php echo $email ?>">
+          <span id='emailerror'> </span>
+          <?php echo $emailerror; ?>
+          <br>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td><label for="">Note</label></td>
+        <td><input type="text" placeholder="Note" name='note' id='note' value="<?php echo $note ?>"><span id='noteerror'> </span>
+          <?php echo $noteerror; ?></td>
+      </tr>
+
+      <tr>
+        <td><label for="">City</label></td>
+        <td> <input type="text" placeholder="City" name='city' id='city' value="<?php echo $city ?>"><span id='cityerror'> </span>
+          <?php echo $cityerror; ?></td>
+      </tr>
+      <tr>
+        <td><label for="">Phone</label></td>
+        <td><input type="text" placeholder="Phone" name='phone' id='phone' value="<?php echo $phone ?>"><span id='phoneerror'> </span>
+          <?php echo $phoneerror; ?></td>
+      </tr>
+
+      <tr>
+        <td><label for="">Entry By</label></td>
+        <td><input type="number" value="<?php echo $entry ?>" placeholder="Entry By" name='entry_by' id='entry_by'><span id='entryerror'> </span>
+          <?php echo $entryerror; ?></td>
+      </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <tr>
+        <td></td>
+        <td><button id='btn-submit' type="submit">Submit</button></td>
+      </tr>
+
+
+
+
+
+
+    </table>
+  </form>
+
+
+
+
   <script>
     const formValidation = () => {
 
@@ -102,130 +219,6 @@
 
     }
   </script>
-  <?php
-  include('./navbar.php');
-  require '../controllers/registration.php'; ?>
-  <form id="buyer_form" onsubmit="return  formValidation()" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF']); ?>"method="POST">
-
-    <table>
-
-      <tr>
-
-        <td><label for="">Amount</label></td>
-
-        <td><input type="number" placeholder="Amount" name='amount' id='amount' value="<?php echo $amount ?>"> <span id='amounterror'></span> <?php echo $amounterror; ?> <br><br></td>
-      </tr>
-
-
-
-      <tr>
-
-        <td><label for="">Buyer</label></td>
-        <td> <input type="text" placeholder="Buyer" name='buyer' id='buyer' value="<?php echo $buyer ?>">
-          <span id='buyererror'> </span>
-          <?php echo $buyererror; ?><br><br>
-        </td>
-      </tr>
-
-
-
-      <tr>
-
-        <td><label for="">Receipt Id</label></td>
-
-        <td><input type="text" placeholder="Receipt Id" name='receipt_id' id='receipt_id' value="<?php echo $receiptId ?>">
-          <span id='receipterror'> </span>
-          <?php echo $receipterror; ?>
-          <br><br>
-        </td>
-      </tr>
-
-
-
-
-      <tr>
-
-
-        <td><label for="">Items</label></td>
-        <td><input type="text" placeholder="Items" name='items' id='items' value="<?php echo $items ?>"><span id='itemserror'> </span>
-
-          <?php echo $itemserror; ?><br><br></td>
-      </tr>
-
-
-
-      <tr>
-        <td><label for="">Buyer Email</label></td>
-        <td><input type="text" placeholder="Buyer Email" name='buyer_email' id='buyer_email' value="<?php echo $email ?>">
-          <span id='emailerror'> </span>
-          <?php echo $emailerror; ?>
-          <br><br>
-        </td>
-      </tr>
-
-
-
-      <tr>
-        <td><label for="">Note</label></td>
-        <td><input type="text" placeholder="Note" name='note' id='note' value="<?php echo $note ?>"><span id='noteerror'> </span>
-          <?php echo $noteerror; ?><br><br></td>
-      </tr>
-
-      <tr>
-        <td><label for="">City</label></td>
-        <td> <input type="text" placeholder="City" name='city' id='city' value="<?php echo $city ?>"><span id='cityerror'> </span>
-          <?php echo $cityerror; ?><br><br></td>
-      </tr>
-      <tr>
-        <td><label for="">Phone</label></td>
-        <td><input type="text" placeholder="Phone" name='phone' id='phone' value="<?php echo $phone ?>"><span id='phoneerror'> </span>
-          <?php echo $phoneerror; ?><br><br></td>
-      </tr>
-
-      <tr>
-        <td><label for="">Entry By</label></td>
-        <td><input type="number" value="<?php echo $entry ?>" placeholder="Entry By" name='entry_by' id='entry_by'><span id='entryerror'> </span>
-          <?php echo $entryerror; ?><br><br></td>
-      </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <tr>
-        <td><button id='btn-submit' type="submit">Submit</button></td>
-      </tr>
-
-
-
-
-
-
-    </table>
-  </form>
-
-
-
-
-
 
 
 </body>
